@@ -1,14 +1,21 @@
 import React, { useState } from 'react'
 
-function Example() {
-  // Declare a new state variable, which we'll call "count"
-  const [count, setCount] = useState(0)
+const Example = () => {
+  const [text, setText] = useState('random text')
+
+  const handleClick = () => {
+    if (text === 'random text') {
+      setText('nadir text')
+    } else {
+      setText('random text')
+    }
+  }
 
   return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>Click me</button>
-    </div>
+    <React.Fragment>
+      <h1>{text}</h1>
+      <button onClick={handleClick} type='button' className='btn'></button>
+    </React.Fragment>
   )
 }
 
