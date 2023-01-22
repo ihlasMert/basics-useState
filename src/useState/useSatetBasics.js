@@ -14,7 +14,9 @@ const Example = () => {
   return (
     <React.Fragment>
       <h1>{text}</h1>
-      <button onClick={handleClick} type='button' className='btn'></button>
+      <button onClick={handleClick} type='button' className='btn'>
+        click here
+      </button>
     </React.Fragment>
   )
 }
